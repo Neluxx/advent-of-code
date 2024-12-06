@@ -1,5 +1,5 @@
-from List1 import list1
-from List2 import list2
+from Lists import list1
+from Lists import list2
 
 list1.sort()
 list2.sort()
