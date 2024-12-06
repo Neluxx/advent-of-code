@@ -1,4 +1,4 @@
-from Reports import reports
+from input import reports
 
 
 def is_safe_report(levels):
@@ -21,13 +21,18 @@ def is_safe_report_with_one_removal(levels):
     return False
 
 
-def get_safe_reports_count(reports):
+def get_safe_reports_count(reports, with_dampener):
     """Count how many reports are safe including Problem Dampener logic."""
     safe_count = 0
     for levels in reports:
-        if is_safe_report(levels) or is_safe_report_with_one_removal(levels):
-            safe_count += 1
+        if with_dampener:
+            if is_safe_report(levels) or is_safe_report_with_one_removal(levels):
+                safe_count += 1
+        else:
+            if is_safe_report(levels):
+                safe_count += 1
     return safe_count
 
 
-print(get_safe_reports_count(reports))
+print("Safe reports:", get_safe_reports_count(reports, False))
+print("Safe reports with dampener:", get_safe_reports_count(reports, True))
