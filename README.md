@@ -11,7 +11,7 @@ Welcome to my **Advent of Code 2024** solutions repository! This repository cont
 
 This repository is organized by day, with each folder representing a single day of the challenge. Each folder typically contains:
 
-- **`input.txt`**: The puzzle input provided for the day.
+- **`input.py`**: The puzzle input provided for the day.
 - **`solution.py`**: My Python implementation of the solution.
 - **`README.md`**: A brief explanation of the problem and the approach taken to solve it (optional).
 
@@ -19,11 +19,11 @@ Example structure:
 ```
 /
 ├── day01/
-│   ├── input.txt
+│   ├── input.py
 │   ├── solution.py
 │   ├── README.md
 ├── day02/
-│   ├── input.txt
+│   ├── input.py
 │   ├── solution.py
 │   ├── README.md
 ...
